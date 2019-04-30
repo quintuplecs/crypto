@@ -128,12 +128,35 @@ def crack_cipher(cipher, answers = 1):
         'chance' : chance
     }
 
+def load_file():
+    while 1:
+        
+
 def main():
-    with open(sys.argv[1]) as f:
-        for line in f:
-            cipher = b64decode(f.read()).decode('ascii')
-    results = crack_cipher(cipher, int(sys.argv[2]))
-    print(results['text'][results['keys'][0]])
+    print('\    /   -----      -----')
+    print(' \  /   |     |    |     |')
+    print('  \/    |     |     -----')
+    print('  /\    |     |    |   \')
+    print(' /  \   |     |    |    \')
+    print('/    \   -----     |     |')
+    print('9fh9#$1jf#CRACKERF59j3$18hf#')
+    print()
+    while 1:
+        print('MENU')
+        print('1: Load file')
+        print('2: Manual load')
+        print('3: Crack cipher')
+        print('4: View registers')
+        print('5: Quit')
+        print()
+        try:
+            selection = int(input())
+        except ValueError:
+            continue
+        if selection > 5 or selection < 1:
+            continue
+        if selection == 1:
+
 
 if __name__ == '__main__':
     main()
